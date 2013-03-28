@@ -21,7 +21,8 @@ public static String findMongoDoc(String str) {
 				System.out.println(name);
 								
 		} else {
-			System.out.println("Not found:");
+			name = "Not found:";
+			//System.out.println("Not found:");
 		}
 		
 		/**** Done ****/
@@ -29,7 +30,5 @@ public static String findMongoDoc(String str) {
 		//cursor.close();
 		return name;
 	}
-
-protected String name;
 
 }

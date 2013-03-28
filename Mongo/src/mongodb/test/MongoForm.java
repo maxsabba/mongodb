@@ -47,7 +47,6 @@ public class MongoForm extends Shell {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				String input = textInput.getText();
-				FindMongoDoc.findMongoDoc(input);
 				textOutput.append(FindMongoDoc.findMongoDoc(input));			}
 		});
 		btnNewButton.setBounds(107, 39, 75, 25);
