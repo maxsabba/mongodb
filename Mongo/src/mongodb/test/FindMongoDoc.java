@@ -18,7 +18,7 @@ public static String findMongoDoc(String str) {
 		if (cursor.hasNext()) {
 			name = query.getString("name");
 				// System.out.println(cursor.next());
-				System.out.println(name);
+				//System.out.println(name);
 								
 		} else {
 			name = "Not found:";

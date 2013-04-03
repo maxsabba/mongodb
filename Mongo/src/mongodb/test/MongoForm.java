@@ -47,7 +47,9 @@ public class MongoForm extends Shell {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				String input = textInput.getText();
-				textOutput.append(FindMongoDoc.findMongoDoc(input));			}
+				textOutput.setText(FindMongoDoc.findMongoDoc(input));
+				//textOutput.append(FindMongoDoc.findMongoDoc(input));		
+				}
 		});
 		btnNewButton.setBounds(107, 39, 75, 25);
 		btnNewButton.setText("Esegui");
@@ -61,7 +63,7 @@ public class MongoForm extends Shell {
 	 * Create contents of the shell.
 	 */
 	protected void createContents() {
-		setText("SWT Application");
+		setText("Mongo DB");
 		setSize(450, 300);
 
 	}
