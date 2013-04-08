@@ -12,8 +12,7 @@ public static DBCollection table;
 
 	public static void readMongoColl() {
 		MongoConnect.mongoConnect();
-		table = MongoConnect.db.getCollection("things");
-		
+		table = MongoConnect.db.getCollection("pippo");
 	}
 
 }

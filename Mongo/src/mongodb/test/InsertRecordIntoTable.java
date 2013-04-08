@@ -23,7 +23,7 @@ public class InsertRecordIntoTable {
 
 	
 	public static String insertRecord() {
-		String queryString = "SELECT TOP 10 [filepath],[Codice Filiale],[Codice Prodotto],[Codice Subfiliale],[Numero Contratto],[Alphacode Cliente],[Data Liquidazione],[Carton ID],[File Folder] FROM [Citi].[dbo].[DataBase RV950045 Contratti Contratti Elettronici 18.07.21];";
+		String queryString = "SELECT [filepath],[Codice Filiale],[Codice Prodotto],[Codice Subfiliale],[Numero Contratto],[Alphacode Cliente],[Data Liquidazione],[Carton ID],[File Folder] FROM [Citi].[dbo].[DataBase RV950045 Contratti Contratti Elettronici 18.07.21];";
 		String a = "\'";
 		try {
 			// SELECT from MSSQL db			
@@ -41,35 +41,17 @@ public class InsertRecordIntoTable {
 				String field8 = a +"Carton ID"  + a + ":" + a+ rs.getString(8)+ a;
 				String field9 = a +"File Folder"  + a + ":" + a+ rs.getString(9)+ a;
 				
-				json = "{" + field1 + "," +"}";
-//				PrintQuery.printQuery(json);
+				json = "{" + field1 + "," 
+						+ field2 + "," 
+						+ field3+ ","
+						+ field4+ "," 
+						+ field5+ "," 
+						+ field6+ "," 
+						+ field7+ "," 
+						+ field8+ "," 
+						+ field9+ ","
+						+"}";
 				InsertMongoBd.insertMongoDb(json);
-				
-		//		return json;			
-//				BasicDBObject doc = new BasicDBObject("filepath", rs.getString(1))
-//						.append("Codice Filiale",  rs.getString(2))
-//						.append("Codice Prodotto", rs.getString(3))
-//						.append("Codice Subfiliale", rs.getString(4))
-//						.append("Numero Contratto", rs.getString(4))
-//						.append("Alphacode Cliente",  rs.getString(6))
-//						.append("Data Liquidazione", rs.getString(7))
-//						.append("Carton ID", rs.getString(8))
-//						.append("File Folder", rs.getString(9));
-				
-//				BasicDBObject doc = new BasicDBObject();
-//				doc.put("filepath", rs.getString(1));
-//				doc.put("Codice Filiale",  rs.getString(2));
-//				doc.put("Codice Prodotto", rs.getString(3));
-//				doc.put("Codice Subfiliale", rs.getString(4));
-//				doc.put("Numero Contratto", rs.getString(4));
-//				doc.put("Alphacode Cliente",  rs.getString(6));
-//				doc.put("Data Liquidazione", rs.getString(7));
-//				doc.put("Carton ID", rs.getString(8));
-//				doc.put("File Folder", rs.getString(9));
-////				DBObject doc = (DBObject)JSON.parse(json);
-//				//doc.put("name", ins);
-				//ReadMongoColl.table.insert(doc);
-				//System.out.println(field1 +field2 +field3 +field4 +field5 +field6+field7 +field8 +field9);
 			} 
 			
 		} catch (SQLException e) {
