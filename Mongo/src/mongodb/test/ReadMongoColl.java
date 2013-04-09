@@ -6,7 +6,7 @@ import com.mongodb.DBCollection;
 
 public class ReadMongoColl {
 	
-	/** find the document inside the correct collection **/
+	/** open the mongo collection **/
 
 public static DBCollection table;
 

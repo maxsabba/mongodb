@@ -8,7 +8,7 @@ import com.mongodb.MongoException;
 
 public class MongoConnect {
 
-/** connect to the selected db **/	
+/** connect to the selected db. if the db doesn't exist they will be created **/	
 	
 public static DB db;
 

@@ -2,6 +2,8 @@ package mongodb.test;
 
 import java.sql.*;
 
+/** connceto to a mssql DB **/
+
 public class ConnectDb {
 	String driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 	String connectionURL = "jdbc:sqlserver://127.0.0.1:1433";
